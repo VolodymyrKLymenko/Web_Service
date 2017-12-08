@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/assets/index.css">
+</head>
+<body>
+	<div id = "header">
+		<a class = "menuItem" href = "/">Main Page</a>
+		<a class = "menuItem" href = "/load">Execute</a>
+		<a class = "menuItem" href = "/profile">MyPage</a>
+		<a class = "menuItem" href = "/login">Enter</a>
+	</div>
+	<div id ="content">
+		<div class="logPage">
+
+		<h1><%= message %></h1>
+		<form method="post">
+			<b>Login: <br/><input name = "username"/><hr/>
+			Password: <br/><input name = "password" type = "password"/><hr/>
+			<button name = "Log in" class = "button">Log in</button>
+		</form>
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+		
+		<div class="logPage">
+		<form method="post" action = "signup">
+			Login:           <br/><input name = "username"/><hr/>
+			Password:        <br/><input name = "password" type = "password"/><hr/>
+			Repeat: </b><br/><input name = "password_repeat" type = "password"/><hr/>
+			<button name = "Sign un" class = "button">Sign up</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

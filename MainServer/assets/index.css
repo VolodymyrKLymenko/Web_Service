@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(128, 144, 160);
+
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+#header
+{
+	background-color: rgb(255, 121, 58);
+	height:auto;
+	line-height: 100px;
+	text-align:center;
+	vertical-align:center;
+  border-radius: 20px;
+}
+
+
+
+.menuItem{
+  border: none;
+  color: white;
+  margin-left:70px;
+  margin-right:70px;
+
+  display: inline-block;
+
+  font-size:35px;
+
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.menuItem:hover {
+  background-color: rgb(200, 100, 58);
+}
+
+#content {
+	text-align:center;
+
+  padding-top: 10%;
+	
+  font: normal 16px;
+  border-radius: 20px;
+
+  background: rgb(255, 121, 58);
+
+  background-size: auto;
+  width :80%;
+  height: auto;
+  min-height:500px;
+
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#content table{
+  font-size: 20px;
+  padding-left: 30%;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 30px;
+
+  border-radius: 3px;
+  font: normal 16px;
+}
+
+.logPage{
+    width: 50%;
+    margin-left: 25%;
+
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+
+    padding: 20px;
+}
+
+.fontStyle{
+  font-size: 50px;
+}
