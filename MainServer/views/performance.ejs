@@ -4,31 +4,40 @@
 <link rel="stylesheet" type="text/css" href="/assets/index.css">
 </head>
 <body>
-	<div id = "header">
+	<header>
 		<a class = "menuItem" href = "/">Main Page</a>
 		<a class = "menuItem" href = "/load">Execute</a>
 		<a class = "menuItem" href = "/profile">MyPage</a>
 		<a class = "menuItem" href = "/login">Enter</a>
+	</header>
+
+	<div>
+		<% if(user) { %>
+       		<p>User <%- user -%> </p></br>
+    	<% } else { %>
+   	    	<p>Unregister user</p>
+   		<% } %> 
 	</div>
+
 	<div id ="content">
-		<table caption = "Ctalog" class="steelBlueCols">
+		<p>Current executing tasks</p>
+		<a class = "menuItem" href = "/performance">Refresh</a>
+
+		<table>
+		<tr>
+        	<th> Server  </th>
+   			<th> Task_id </th> 
+   			<th> Number  </th>
+   			<th> State   </th>
+  		</tr>
+		<% for(var i = 0; i < data.task_ids.length; ++i) { %>
 			<tr>
-				<th>Server</th>
-				<th>Threads</th>
+				<th> <%- data.ser_ids[i]  -%> </th>
+				<th> <%- data.task_ids[i] -%> </th> 
+				<th> <%- data.datas[i]    -%> </th>
+				<th> <%- data.states[i]   -%> </th>
 			</tr>
-			
-			<tr>
-				<td> Server </td>
-				<td> processing</td>
-			</tr>
-			<tr>
-				<td> Server </td>
-				<td> processing</td>
-			</tr>
-			<tr>
-				<td> Server </td>
-				<td> processing</td>
-			</tr>
+		<% } %>
 		</table>
 	</div>
 

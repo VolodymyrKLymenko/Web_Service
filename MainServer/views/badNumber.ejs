@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/assets/index.css">
+</head>
+<body>
+	<header>
+		<a class = "menuItem" href = "/">Main Page</a>
+		<a class = "menuItem" href = "/load">Execute</a>
+		<a class = "menuItem" href = "/profile">MyPage</a>
+		<a class = "menuItem" href = "/login">Enter</a>
+	</header>
+
+	<div>
+		<% if(user) { %>
+       		<p>User <%- user -%> </p></br>
+    	<% } else { %>
+   	    	<p>Unregister user</p>
+   		<% } %> 
+	</div>
+
+
+
+	<div id ="content">
+			<p style="font-size:40px;">You enter bad number. This executer can`t manage it.</p>
+			<p style="font-size:40px;">Because: <%- reason -%> :(</p>
+	</div>
+
+</body>
+</html>

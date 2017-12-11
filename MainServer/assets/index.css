@@ -5,7 +5,7 @@ body {
     background-size: cover;    
 }
 
-#header
+header
 {
 	background-color: rgb(255, 121, 58);
 	height:auto;
@@ -15,7 +15,26 @@ body {
   border-radius: 20px;
 }
 
+table
+{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
 
+table tr
+{
+  border-color: black;
+  border-width: 5px;
+}
+
+table tr th
+{
+  border-color: rgb(0, 0, 0);
+  background-color: white;
+  padding: 10px;
+}
 
 .menuItem{
   border: none;
@@ -38,7 +57,7 @@ body {
 #content {
 	text-align:center;
 
-  padding-top: 10%;
+  padding-top: 20px;
 	
   font: normal 16px;
   border-radius: 20px;
@@ -52,11 +71,6 @@ body {
 
   margin-left: 10%;
   margin-top: 5%;
-}
-
-#content table{
-  font-size: 20px;
-  padding-left: 30%;
 }
 
 .button {
@@ -81,4 +95,9 @@ body {
 
 .fontStyle{
   font-size: 50px;
+}
+
+.action_header
+{
+  font-size: 30px;
 }

@@ -9,8 +9,8 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use('/assets', express.static('assets'));
+
+app.use('/', routes);
 
 app.use((req, res, next) => {
   var err = new Error('Not Found');
@@ -25,6 +25,7 @@ app.use((err, req, res, next) => {
     error: {}
   });
 });
+
 
 app.listen(1338, function(){
     console.log('Express server listening on port 1338');

@@ -4,41 +4,39 @@
 <link rel="stylesheet" type="text/css" href="/assets/index.css">
 </head>
 <body>
-	<div id = "header">
+	<header>
 		<a class = "menuItem" href = "/">Main Page</a>
 		<a class = "menuItem" href = "/load">Execute</a>
 		<a class = "menuItem" href = "/profile">MyPage</a>
 		<a class = "menuItem" href = "/login">Enter</a>
-	</div>
+	</header>
 	<div id ="content">
-		<p class="fontStyle">History of execution</p>
+		<p class="fontStyle">History of your execution</p>
+
+		<% if(user) { %>
+
 		<table>
+		<tr>
+        	<th>Task_id</th>
+   			<th>Number </th> 
+   			<th>Server </th>
+   			<th>Time   </th> 
+   			<th>Result </th>
+  		</tr>
+		<% for(var i = 0; i < data_.tasks_id.length; ++i) { %>
 			<tr>
-				<th>Task №</th>
-				<th>Number</th>
-				<th>Start at</th>
-				<th>Is executed</th>
+				<th> <%- data_.tasks_id[i]   -%> </th>
+				<th> <%- data_.datas[i]      -%> </th> 
+				<th> <%- data_.servers_id[i] -%> </th>
+				<th> <%- data_.times[i]      -%> </th>
+				<th> <%- data_.results[i]    -%> </th>
 			</tr>
-			
-			<tr>
-				<td> 1 </td>
-				<td> Number </td>
-				<td> Time </td>
-				<td> Is executed </td>
-			</tr>
-			<tr>
-				<td> 2 </td>
-				<td> Number </td>
-				<td> Time </td>
-				<td> Is executed </td>
-			</tr>
-			<tr>
-				<td> 3 </td>
-				<td> Number </td>
-				<td> Time </td>
-				<td> Is executed </td>
-			</tr>
+		<% } %>
 		</table>
+
+		<% } else { %>
+   	    	<p style="font-size:50px">At first you must log in</p>
+   		<% } %> 
 	</div>
 
 </body>

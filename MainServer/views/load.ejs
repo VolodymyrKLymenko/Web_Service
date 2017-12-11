@@ -4,17 +4,60 @@
 <link rel="stylesheet" type="text/css" href="/assets/index.css">
 </head>
 <body>
-	<div id = "header">
+	<header>
 		<a class = "menuItem" href = "/">Main Page</a>
 		<a class = "menuItem" href = "/load">Execute</a>
 		<a class = "menuItem" href = "/profile">MyPage</a>
 		<a class = "menuItem" href = "/login">Enter</a>
+	</header>
+
+	<div>
+		<% if(user) { %>
+       		<p>User <%- user -%> </p></br>
+    	<% } else { %>
+   	    	<p>Unregister user</p>
+   		<% } %> 
 	</div>
+
+
+
 	<div id ="content">
-		<form action = "/load" method = "post">
-			<input type = "text", name = "result" class = "button">
-			<button class = "button" name = "Load">Execute</button>
+		<% if(user) { %>
+
+		<form action = "/add" method = "post">
+			<p class="action_header">Add new task: <input type = "text", name = "number" class = "button">
+			<button class = "button" name = "Add">ADD</button></p>
 		</form>
+		<form action = "/execute_at" method = "post">
+			<p class="action_header">Execute__one: <input type = "text", name = "id_" class = "button">
+			<button class = "button" name = "ExecuteAt">Execute</button></p>
+		</form>
+		<form action = "/execute_all" method = "post">
+			<p class="action_header">Execute__all: 
+			<button class = "button" name = "ExecuteAll">Execute</button></p>
+		</form>
+		
+		<a class = "menuItem" href = "/performance">Current performance</a>
+		<hr>
+
+		<table>
+		<tr>
+        	<th>Task_id</th>
+   			<th>Number </th> 
+   			<th>Server </th>
+  		</tr>
+		<% for(var i = 0; i < data_.tasks_id.length; ++i) { %>
+			<tr>
+				<th> <%- data_.tasks_id[i]   -%> </th>
+				<th> <%- data_.datas[i]      -%> </th> 
+				<th> <%- data_.servers_id[i] -%> </th>
+			</tr>
+		<% } %>
+		</table>
+
+		<% } else { %>
+   	    	<p style="font-size:50px">At first you must log in</p>
+   		<% } %> 
 	</div>
 
 </body>

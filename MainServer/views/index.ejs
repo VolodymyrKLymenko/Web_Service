@@ -4,18 +4,23 @@
 <link rel="stylesheet" type="text/css" href="/assets/index.css">
 </head>
 <body>
-	<div id = "header">
+	<header>
 		<a class = "menuItem" href = "/">Main Page</a>
 		<a class = "menuItem" href = "/load">Execute</a>
 		<a class = "menuItem" href = "/profile">MyPage</a>
 		<a class = "menuItem" href = "/login">Enter</a>
 
-	</div>
+	</header>
 	<div id ="content">
+
+    <% if(user) { %>
+        <p>Welcome <%- user -%> <%- surname -%> </p></br>
+    <% } else { %>
+        <p>Unregister user</p>
+    <% } %> 
+
 		<h1>Complex task executer</h1>
 	</div>
-	<div id = "header">
-	</div>
-
+	
 </body>
 </html>
